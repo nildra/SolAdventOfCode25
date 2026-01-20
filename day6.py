@@ -1,11 +1,9 @@
-import operator
-
 def compute_operation(doc):
     ops_dict = {
-        "+": operator.add,
-        "-": operator.sub,
-        "*": operator.mul,
-        "/": operator.truediv
+        "+": lambda x,y: x+y,
+        "-": lambda x,y: x-y,
+        "*": lambda x,y: x*y,
+        "/": lambda x,y: x/y
     }
 
     with open(doc, 'r') as f:
